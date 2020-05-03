@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ```
 ### Model
 Download Pre-trained Model/Weight
-- [craft_mlt_25k.pth](https://drive.google.com/open?id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ)<br>
+- [craft_mlt_25k.pth](https://drive.google.com/open?id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ),<br>
 - [TPS-ResNet-BiLSTM-Attn.pth]((https://drive.google.com/drive/folders/15WPsuPJDCzhp2SvYZLRj8mAlT3zmoAMW))
 
 ### Test
@@ -33,9 +33,10 @@ Run the below code:<br>
 ```
 python extract.py -i data/AL.jpeg -o result
 ```
-where "extract.py" -> filename<br>
-      "data/AL.jpeg" -> data is input directory and AL.jpeg is image file<br>
-      "result" -> output directory where extracted text will be saved
+where 
+"extract.py" -> filename<br>
+"data/AL.jpeg" -> data is input directory and AL.jpeg is image file<br>
+"result" -> output directory where extracted text will be saved
 
 ## Acknowledgements
 This implementation has been based on these repository [clovaai/CRAFT-pytorch](https://github.com/clovaai/CRAFT-pytorch), [clovaai/deep-text-recognition-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark).
