@@ -114,18 +114,10 @@ if __name__ == '__main__':
     args = vars(arg.parse_args())
 
     image = cv2.imread(args['input'])
-    # print(image.shape)
     # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # # print(gray.shape)
     # blur = cv2.GaussianBlur(gray, (5,5), 0)
-    # # thresh = cv2.threshold(blur, 127, 255, cv2.THRESH_BINARY)[1]
-    # # thresh = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
     # ret,thresh = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     # thresh = np.expand_dims(thresh, axis=2)
-    # cv2.imwrite('fram.png',thresh)
-    # cv2.imshow('thresh_image',thresh)
-    # cv2.waitKey(0)
-    # print(thresh.shape)
     global net, refine_net
 
     net = craft.CRAFT()
@@ -138,28 +130,10 @@ if __name__ == '__main__':
 
     filename = os.path.basename(args['input'])
     output_dir = args['output']+f'/{filename}'
-    # print(output_dir)
-    # cv2.imwrite(output_dir,img_boxed)
-
-    # res_file = args['output'] + f"/res_{filename.split('.')[0]}.txt"
-    # with open(res_file, 'w') as f:
-    #     for i, box in enumerate(polys):
-    #         poly = np.array(box).astype(np.int32).reshape((-1))
-    #         strResult = ','.join([str(p) for p in poly]) + '\r\n'
-    #         f.write(strResult)
-    # cv2.imshow('fig', img_boxed)
-    # cv2.waitKey(0)
-    # cv2.imshow('fig', heatmap)
-
-    # detection
-    # bboxes, score_text = test_net(net, image, args.text_threshold, args.link_threshold, args.low_text, args.cuda)
-
+    
     for i, bbs in enumerate(bboxes):
-        # print('a')
         crop = bounding_box(bbs)
-        # print('b')
         cropped = image[crop[0][1]:crop[1][1],crop[0][0]:crop[1][0]]
-        # print('c')
         
         cv2.imwrite(args['output'] + '/res_' + filename.split('.')[0] + '_cropped_' + str(i) + '.png', cropped)
 
@@ -172,7 +146,7 @@ if __name__ == '__main__':
                     saved_model='weights/TPS-ResNet-BiLSTM-Attn.pth', sensitive=False, workers=4)
     opt.num_gpu = torch.cuda.device_count()
     extract_text = demo.demo(opt)
-    print(extract_text)
+    # print(extract_text)
 
     for filename in os.listdir(args['output']):
         file_path = os.path.join(args['output'], filename)
@@ -183,3 +157,7 @@ if __name__ == '__main__':
                 shutil.rmtree(file_path)
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
+
+    with open(args['output']+'/extracted.txt','w') as f:
+        for item in extract_text:
+            f.write("%s\n" % item)
