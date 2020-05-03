@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+result/res_AL_cropped_0.png	driver                   	1.0000
+result/res_AL_cropped_1.png	license                  	0.9999
+result/res_AL_cropped_2.png	alabama                  	0.9988
+result/res_AL_cropped_3.png	1234567                  	0.9693
+result/res_AL_cropped_4.png	d                        	0.9989
+result/res_AL_cropped_5.png	no                       	0.9998
+result/res_AL_cropped_6.png	class                    	0.9997
+result/res_AL_cropped_7.png	01051988                 	0.2749
+result/res_AL_cropped_8.png	01052014                 	0.9711
+result/res_AL_cropped_9.png	exp                      	0.9997
+result/res_AL_cropped_10.png	d                        	0.3942
+result/res_AL_cropped_11.png	ob                       	0.5534
+result/res_AL_cropped_12.png	connor                   	1.0000
+result/res_AL_cropped_13.png	sample                   	0.9999
+result/res_AL_cropped_14.png	wonderful                	0.9999
+result/res_AL_cropped_15.png	drive                    	1.0000
+result/res_AL_cropped_16.png	1                        	0.9966
+result/res_AL_cropped_17.png	montgomery               	0.9997
+result/res_AL_cropped_18.png	al                       	0.9998
+result/res_AL_cropped_19.png	361041234                	0.7211
+result/res_AL_cropped_20.png	endorsements             	0.9996
+result/res_AL_cropped_21.png	restrictions             	0.9993
+result/res_AL_cropped_22.png	a                        	1.0000
+result/res_AL_cropped_23.png	i                        	0.9750
+result/res_AL_cropped_24.png	01052010                 	0.9738
+result/res_AL_cropped_25.png	505                      	0.9975
+result/res_AL_cropped_26.png	blu                      	0.9997
+result/res_AL_cropped_27.png	sexm                     	0.9956
+result/res_AL_cropped_28.png	ht                       	0.6699
+result/res_AL_cropped_29.png	15s                      	0.4905
+result/res_AL_cropped_30.png	eyes                     	0.9994
+result/res_AL_cropped_31.png	120                      	0.9985
+result/res_AL_cropped_32.png	bln                      	0.9983
+result/res_AL_cropped_33.png	hair                     	0.2504
+result/res_AL_cropped_34.png	sample                   	0.7040
+result/res_AL_cropped_35.png	connormon                	0.1035
+result/res_AL_cropped_36.png	colonol                  	0.3656
+result/res_AL_cropped_37.png	huch                     	0.5629
+result/res_AL_cropped_38.png	180                      	0.0614
+result/res_AL_cropped_39.png	mccall                   	0.9909
+result/res_AL_cropped_40.png	diractor                 	0.7457
+result/res_AL_cropped_41.png	public                   	0.7458
+result/res_AL_cropped_42.png	sarely                   	0.4347
+result/res_AL_cropped_43.png	of                       	0.9994
