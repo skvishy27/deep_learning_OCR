@@ -1,6 +1,6 @@
 lmdb==0.98
 natsort==7.0.1
-nltk==3.5
+nltk==3.10.4
 numpy==1.22.0
 opencv-contrib-python==4.2.0.34
 Pillow==13.0.0
