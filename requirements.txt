@@ -2,7 +2,7 @@ lmdb==0.98
 natsort==7.0.1
 nltk==3.10.4
 numpy==1.22.0
-opencv-contrib-python==4.2.0.34
+opencv-contrib-python==4.8.1.78
 Pillow==13.0.0
 pip==20.1
 scikit-image==0.16.2
